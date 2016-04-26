@@ -45,7 +45,7 @@ import java.sql.*;
 			 wyszukaj = conn.createStatement();
 			 ResultSet result;
 			 result = wyszukaj.executeQuery("SELECT * FROM userbase WHERE user="+userName);
-			 String passwod = result.getString(3);
+			 String passwod = result.getString(4);
 			 if(password.equals(passwod)){
 				 resp = HttpServletResponse.SC_OK;
 				}
