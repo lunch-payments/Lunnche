@@ -1,0 +1,14 @@
+body{
+     text-align: center;
+ }
+.form-control{
+    width: 200px;
+    margin: auto;
+}
+h1{
+    margin: 20px;
+}
+
+input{
+    color: 373a3c;
+}
