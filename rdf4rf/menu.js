@@ -36,6 +36,7 @@ function colse() {
     $('td.btnnames').removeClass("no");
     $('td.namest').removeClass("no");
     $('tr.conf').addClass("no");
+    $( "div.avatarform" ).removeClass('co');
     zmien = 0;
 }
 
@@ -80,5 +81,6 @@ function sur() {
 function confim() {
     if(zmien > 1){
         $('tr.conf').removeClass("no");
+        $( "div.avatarform" ).addClass('co');
     };
 }
