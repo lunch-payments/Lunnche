@@ -155,13 +155,13 @@ tiny {
     }
 }
 .order-newItem-comp {
-    margin: -5px -10px 1px;
+    margin: -5px 5px 1px;
     &:before {
         content: "Firma";
     }
 }
 .order-newItem-title {
-    margin: 0 -10px;
+    margin: 0 5px;
     &:before {
         content: "Danie";
     }
@@ -219,5 +219,17 @@ tiny {
     }
     .order-newItem-opt {
         margin-bottom: 46px;
+    }
+}
+@media (min-width: 48em) {
+    .order-newItem-comp,
+    .order-newItem-title {
+        margin: -10px -5px 0 5px;
+    }
+    .order-newItem-comp {
+        border-right: 1px solid white;
+    }
+    .order-newItem-opt {
+        margin-bottom: 0;
     }
 }
