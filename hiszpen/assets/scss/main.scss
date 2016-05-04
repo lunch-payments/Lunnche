@@ -1,4 +1,5 @@
 @import "compass";
+$main-color: rgb(198, 26, 26);
 * {
     box-sizing: border-box;
 }
@@ -11,12 +12,24 @@ tiny {
 .clear {
     clear: both;
 }
+.clearBig {
+    @media (min-width: 34em) {
+        clear: both;
+    }
+}
+.nomargin {
+    margin: 0 !important;
+}
 .content {
     margin-top: 20px;
     padding: 15px 10px;
     background-color: #fff;
 }
 .order-item {
+    margin: 0 10px;
+}
+.order-item,
+.order-newItem {
     padding: 5px 10px;
     @media (min-width: 34em) {
         padding: 10px 10px 0;
@@ -27,32 +40,46 @@ tiny {
     &:hover {
         @include box-shadow(0px 5px 15px 0px rgba(0,0,0,0.25));
     }
+    &.small-item {
+        .order-item-title {
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+    }
 }
 .order-item-title {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: 300;
 }
 .order-item-comp {
     color: #818a91;
-    font-size: 0.935rem;
+    font-size: 0.8rem;
 }
-.order-item-person {
+.order-item-person,
+.order-newItem-person {
     padding: 12px 0;
     img {
         width: 35px;
+        margin-right: 5px;
         border-radius: 100%;
     }
     strong {
         display: inline-block;
         position: relative;
         top: 1px;
+        font-size: 0.9rem;
     }
 }
-.order-item-cost {
+.order-item-cost,
+.order-newItem-cost {
     display: inline-block;
     font-size: 1.4rem;
+    tiny {
+        margin-left: -4px;
+    }
 }
-.order-item-opt {
+.order-item-opt,
+.order-newItem-opt {
     display: inline-block;
     float: right;
     font-size: 3rem;
@@ -60,17 +87,137 @@ tiny {
     cursor: pointer;
     @include user-select(none);
 }
+/*
+.order-addItem {
+    position: fixed;
+    left: 0;
+    top: 65px;
+    &.active {
+        position: absolute;
+        width: 100%;
+        // height: 80%;
+        // min-height: 380px;
+        @include box-shadow(0px 0px 5px 5px rgba(0,0,0,0.25));
+        .order-addItem-toggler {
+            width: 100%;
+            color: $main-color;
+            background-color: #fff;
+            border-bottom: $main-color 1px solid;
+            &:before {
+                content: "×";
+            }
+        }
+        .order-addItem-panel {
+            padding: 4px 7px 10px;
+            background-color: #fff;
+            display: block;
+        }
+        .order-item {
+            background-color: $main-color;
+            color: #fff;
+        }
+    }
+}
+.order-addItem-toggler {
+    width: 35px;
+    height: 35px;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    padding-left: 7px;
+    cursor: pointer;
+    background-color: $main-color;
+    color: #fff;
+    &:before {
+        content: "+";
+    }
+}
+.order-addItem-panel {
+    display: none;
+}
+*/
+.order-newItem-comp,
+.order-newItem-title {
+    background-color: #c8c8c8;
+    margin: -5px -10px 1px;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    @include transition(0.07s all);
+    &:hover {
+        background-color: #dedede;
+    }
+    &:before {
+        font-weight: normal;
+        color: #666;
+        font-size: 0.8em;
+        display: block;
+    }
+}
+.order-newItem-comp {
+    margin: -5px -10px 1px;
+    &:before {
+        content: "Firma";
+    }
+}
+.order-newItem-title {
+    margin: 0 -10px;
+    &:before {
+        content: "Danie";
+    }
+}
+.order-newItem-person {
+    display: inline-block;
+    padding: 3px;
+    margin: 7px 0;
+    cursor: pointer;
+    @include transition(0.07s all);
+    &:hover {
+        @include box-shadow(0px 1px 2px 0px rgba(0,0,0,0.25));
+    }
+    strong {
+        top: -6px;
+    }
+}
+.order-newItem-person-noChoosen {
+    color: #808080;
+    font-weight: lighter;
+}
+.order-newItem-addSign {
+    width: 35px;
+    margin-right: 5px;
+    border-radius: 100%;
+    height: 35px;
+    background-color: rgb(204, 204, 204);
+    font-size: 2rem;
+    line-height: 1.15em;
+    padding-left: 8px;
+    display: inline-block;
+}
 @media (min-width: 34em) {
     .order-item-cost,
-    .order-item-opt  {
+    .order-item-opt,
+    .order-newItem-cost,
+    .order-newItem-opt {
         display: block;
         text-align: right;
     }
-    .order-item-cost {
+    .order-item-cost,
+    .order-newItem-cost {
         font-size: 2.4rem;
+        tiny {
+            margin-left: -10px;
+        }
     }
-    .order-item-opt {
-        float: none;
+    .order-newItem-comp {
+        margin-top: -10px;
+    }
+    .order-item-opt,
+    .order-newItem-opt {
         margin-bottom: 20px;
+        float: right;
+    }
+    .order-newItem-opt {
+        margin-bottom: 46px;
     }
 }
