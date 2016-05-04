@@ -1,4 +1,5 @@
 var zmien = 0;
+
 function dis() {
     $( "div.und" ).removeClass( "no" );
     $('div.ma').addClass('no');
@@ -16,45 +17,41 @@ function show() {
 }
 
 function colse() {
-    $( "div.grey" ).addClass( "no" );
-    $( "div.setting" ).addClass( "no" );
-    $("td.pass2" ).addClass( "no" );
-    $('td.pass').removeClass('no');
-    $( "td.passs" ).addClass( "no" );
-    $('td.passs2').addClass('no');
-    $('#pass').removeClass('no');
-    $( "td.avatarz" ).addClass( "no" );
-    $( "td.avatartd" ).removeClass( "no" );
-    $( "td.avatarch" ).addClass( "no" );
-    $( "div.avatarform" ).addClass( "no" );
-    $( "td.sur" ).addClass( "no" );
-    $( "td.surb" ).addClass( "no" );
-    $('td.btnsur').removeClass("no");
-    $('td.surt').removeClass("no");
-    $( "td.names" ).addClass( "no" );
-    $( "td.namesb" ).addClass( "no" );
-    $('td.btnnames').removeClass("no");
-    $('td.namest').removeClass("no");
-    $('tr.conf').addClass("no");
-    $( "div.avatarform" ).removeClass('co');
+    add = ["div.grey", "div.setting", "td.pass2", "td.passs", 'td.passs2', "td.avatarz",  "td.avatarch", "div.avatarform", "td.sur", "td.surb", "td.names", "td.namesb", 'tr.conf'];
+    rem = ["div.avatarform", 'td.pass', '#pass', "td.avatartd", 'td.btnsur', 'td.surt', 'td.btnnames', 'td.namest'];
+
+    for( a in add){
+        $(add[a]).addClass( "no" );
+    }
+
+    for(b in rem){
+        $(rem[b]).removeClass( "no" );
+    }
+
     zmien = 0;
 }
 
 function passbtn() {
-    $( "#pass" ).addClass( "no" );
-    $('td.pass').addClass('no');
-    $( "td.passs" ).removeClass( "no" );
-    $('td.passs2').removeClass('no');
-    $('td.pass2').addClass("no");
+    add = ["#pass", 'td.pass', 'td.pass2'];
+    rem = ["td.passs",'td.passs2' ];
+    for( a in add){
+        $(add[a]).addClass( "no" );
+    }
+
+    for(b in rem){
+        $(rem[b]).removeClass( "no" );
+    }
     zmien++;
     confim();
 }
 
 function avbtn() {
-    $( "td.avatarz" ).removeClass( "no" );
+    rem = ["td.avatarz",  "td.avatarch", "div.avatarform"];
+    for(b in rem){
+        $(rem[b]).removeClass( "no" );
+    }
     $( "td.avatartd" ).addClass( "no" );
-    $( "td.avatarch" ).removeClass( "no" );
-    $( "div.avatarform" ).removeClass( "no" );
+
     zmien++;
     confim();
 }
