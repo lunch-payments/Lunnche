@@ -1,0 +1,11 @@
+[userbase:userId] -> [orderinfo:for]
+ 	-||-	  -> [payments:affectedUser]
+	-||-	  -> [payments:payer]
+
+[foodbase:foodId] -> [orderinfo:foodId]
+[orderdatabase:orderInfoId] <- [orderinfo:orderInfoId]
+[payments:balanceChange] <- [foodbase:costPerPrice]*[orderinfo:quantity]
+
+NOTE:
+*Tworzenie nowego obiektu w orderdatabase ma utworzyæ nowy obiekt w orderinfo
+
