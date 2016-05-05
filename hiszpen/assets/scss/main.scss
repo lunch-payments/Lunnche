@@ -20,13 +20,16 @@ tiny {
 .nomargin {
     margin: 0 !important;
 }
+.debt {
+    color: #df3939;
+}
+.profit {
+    color: rgb(42, 204, 2);
+}
 .content {
     margin-top: 20px;
     padding: 15px 10px;
     background-color: #fff;
-}
-.order-item {
-    margin: 0 10px;
 }
 .order-item,
 .order-newItem {
@@ -47,8 +50,17 @@ tiny {
         }
     }
 }
+.order-item {
+    margin: 5px 10px 8px;
+    .row {
+        position: relative;
+    }
+    @media (min-width: 34em) {
+        padding: 0 10px;
+    }
+}
 .order-item-title {
-    font-size: 1.15rem;
+    font-size: 0.95rem;
     font-weight: 300;
 }
 .order-item-comp {
@@ -57,9 +69,9 @@ tiny {
 }
 .order-item-person,
 .order-newItem-person {
-    padding: 12px 0;
+    padding: 10px 0;
     img {
-        width: 35px;
+        width: 40px;
         margin-right: 5px;
         border-radius: 100%;
     }
@@ -134,6 +146,17 @@ tiny {
 .order-addItem-panel {
     display: none;
 }
+======================================================
+==========================    ========================
+===========================  =========================
+===========================  ====  ===================
+=  = ====   ===  =   =  ===  ===    ===   ===  =  = ==
+=     ==  =  ==  =   =  ===  ====  ===  =  ==        =
+=  =  ==     ===   =   ====  ====  ===     ==  =  =  =
+=  =  ==  ======   =   ====  ====  ===  =====  =  =  =
+=  =  ==  =  ==== === =====  ====  ===  =  ==  =  =  =
+=  =  ===   ===== === ====    ===   ===   ===  =  =  =
+======================================================
 */
 .order-newItem-comp,
 .order-newItem-title {
@@ -175,6 +198,9 @@ tiny {
     &:hover {
         @include box-shadow(0px 1px 2px 0px rgba(0,0,0,0.25));
     }
+    &:active {
+        @include box-shadow(0px 2px 3px 0px rgba(0,0,0,0.25));
+    }
     strong {
         top: -6px;
     }
@@ -194,6 +220,38 @@ tiny {
     padding-left: 8px;
     display: inline-block;
 }
+@media (max-width: 34em) {
+    /*
+    .order-item-opt,
+    .order-newItem-opt {
+        position: absolute;
+        padding: 0 7px;
+        &:hover {
+            color: #454a4e;
+        }
+    }
+    .order-item-opt {
+        top: -99px;
+        right: 11px;
+    }
+    .order-newItem-opt {
+        bottom: 6px;
+        right: 7px;
+        padding: 0 7px;
+    }
+    */
+    .order-item-right {
+        position: static;
+    }
+    .order-item-person {
+        padding: 10px 35px 10px 0px;
+    }
+    .order-item-opt {
+        position: absolute;
+        top: 7px;
+        right: 19px;
+    }
+}
 @media (min-width: 34em) {
     .order-item-cost,
     .order-item-opt,
@@ -209,16 +267,21 @@ tiny {
             margin-left: -10px;
         }
     }
+    .order-newItem-cost tiny {
+        margin-left: 0;
+    }
     .order-newItem-comp {
         margin-top: -10px;
     }
     .order-item-opt,
     .order-newItem-opt {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         float: right;
+        padding-top: 7px;
     }
     .order-newItem-opt {
         margin-bottom: 46px;
+        padding-top: 0;
     }
 }
 @media (min-width: 48em) {
