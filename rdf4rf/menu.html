@@ -11,12 +11,12 @@
 	
 	<body>
 		<div class="name">
-			Witaj Wojtek
+			Witaj (imie)
 				<img class="avatarss" src="avatar.png">
 		</div>
 
 		<div class="und no">
-			<input onclick='setting()' type="button" class="btn btn-primary" value="Zmień ustawienia"><br>
+			<input onclick='setting()' type="button" class="btn btn-primary" value="Zmień swoje dane"><br>
 			<input type="submit" class="btn btn-danger" value="Wyloguj">
 		</div>
 
@@ -33,45 +33,39 @@
 				<div  class="avatarform no centered-element">
 					<input type="file" name="avatar" />
 				</div>
+
 				<table class="table table-hover">
 					<thead>
 					<tr>
 						<th></th>
-						<th>Ustawienia</th>
+						<th class="d">Dane</th>
 						<th><button class="btn btn-danger form" onclick="colse()" >X</button></th>
 
 					</tr>
 					</thead>
 					<tbody>
-					<tr>
-						<td style="padding-top: 50px">Avatar</td>
-						<td> <img class="avatar" src="avatar.png"></td>
-						<td class="avatartd"><button style="margin-top: 30px" onclick="avbtn()" class="btn btn-success">Zmień</button></td>
-						<td  class="avatarz no"><button  style="margin-top: 30px" class="btn btn-info">Zatwierdź</button></td>
-					</tr>
+
 					<tr>
 						<td>Imię</td>
 						<td class="namest">Janusz</td>
 						<td  class="names no"><input class="form-control"></td>
-						<td class="btnnames"><button onclick="names()" class="btn btn-success" id="name">Zmień</button></td>
+						<td class="btnnames"><button onclick="names()" class="btn btn-success guz" >Zmień</button></td>
 						<td  class="namesb no"><button class="btn btn-info">Zatwierdź</button></td>
 					</tr>
 					<tr>
 						<td>Nazwisko</td>
 						<td class="surt">Dooley</td>
 						<td  class="sur no"><input class="form-control"></td>
-						<td class="btnsur"><button onclick="sur()" class="btn btn-success">Zmień</button></td>
+						<td class="btnsur"><button onclick="sur()" class="btn btn-success guz">Zmień</button></td>
 						<td  class="surb no"><button class="btn btn-info">Zatwierdź</button></td>
 					</tr>
 					<tr>
 						<td>Hasło</td>
 						<td class="pass"><button onclick="show()" class="btn btn-info">Pokaż</button></td>
 						<td class="pass2 no">Tu hasło będzie się wyświać</td>
-
 						<td  class="passs no"><input class="form-control"></td>
+						<td id="pass"><button class="btn btn-success guz"  onclick="passbtn()">Zmień</button></td>
 						<td  class="passs2 no"><button class="btn btn-info">Zatwierdź</button></td>
-
-						<td><button class="btn btn-success" id="pass" onclick="passbtn()">Zmień</button></td>
 					</tr>
 					<tr class="conf no">
 						<td></td>

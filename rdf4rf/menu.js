@@ -19,14 +19,14 @@ function show() {
 function colse() {
     add = ["div.grey", "div.setting", "td.pass2", "td.passs", 'td.passs2', "td.avatarz",  "td.avatarch", "div.avatarform", "td.sur", "td.surb", "td.names", "td.namesb", 'tr.conf'];
     rem = ["div.avatarform", 'td.pass', '#pass', "td.avatartd", 'td.btnsur', 'td.surt', 'td.btnnames', 'td.namest'];
+    for(b in rem){
+        $(rem[b]).removeClass( "no" );
+    }
 
     for( a in add){
         $(add[a]).addClass( "no" );
     }
 
-    for(b in rem){
-        $(rem[b]).removeClass( "no" );
-    }
 
     zmien = 0;
 }
