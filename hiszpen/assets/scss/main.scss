@@ -216,8 +216,8 @@ tiny {
     height: 35px;
     background-color: rgb(204, 204, 204);
     font-size: 2rem;
-    line-height: 1.15em;
-    padding-left: 8px;
+    line-height: 1.1em;
+    padding-left: 9px;
     display: inline-block;
 }
 @media (max-width: 34em) {
@@ -244,7 +244,7 @@ tiny {
         position: static;
     }
     .order-item-person {
-        padding: 10px 35px 10px 0px;
+        padding: 10px 35px 10px 0;
     }
     .order-item-opt {
         position: absolute;
