@@ -1,14 +1,28 @@
-body{
-     text-align: center;
- }
+form{
+    text-align: center;
+}
+
 .form-control{
     width: 200px;
     margin: auto;
 }
+
 h1{
+    text-align: center;
     margin: 20px;
 }
 
 input{
-    color: 373a3c;
+    margin: 2px;
+    color: #373a3c;
+}
+.form-control{
+
+    border-color: dimgrey;
+}
+
+button{
+    position: absolute;
+    right:    0;
+    bottom:   0;
 }
