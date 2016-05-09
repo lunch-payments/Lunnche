@@ -1,14 +1,12 @@
 import { Component, Input } from 'angular2/core';
-import { Hero } from './Order';
+import { Order } from './Order';
 
 @Component({
-    selector: '.order-item',
+    selector: 'order-item',
     templateUrl: 'app/orders/order-item.component.html'
 })
 
 export class OrderItemComponent {
-    hero: Hero;
-
     @Input() order;
     constructor() {
     }

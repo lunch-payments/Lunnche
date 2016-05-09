@@ -1,7 +1,9 @@
 import { Component } from 'angular2/core';
 
 import { OrderItemComponent } from './order-item.component';
-import { ORDERS } from './mock-orders'
+import { Orders } from './mock-orders'
+
+const order = new Orders();
 
 @Component({
     selector: 'order-list',
@@ -10,8 +12,8 @@ import { ORDERS } from './mock-orders'
 })
 
 export class OrderListComponent {
-    public orders = ORDERS;
+    // public orders = order.orders;
     constructor() {
-
+        console.log(Orders.orders);
     }
 }

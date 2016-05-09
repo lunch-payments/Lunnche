@@ -8,9 +8,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require('angular2/core');
 var order_item_component_1 = require('./order-item.component');
 var mock_orders_1 = require('./mock-orders');
+var order = new mock_orders_1.Orders();
 var OrderListComponent = (function () {
+    // public orders = order.orders;
     function OrderListComponent() {
-        this.orders = mock_orders_1.ORDERS;
+        console.log(mock_orders_1.Orders.orders);
     }
     OrderListComponent = __decorate([
         core_1.Component({

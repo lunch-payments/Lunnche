@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-9 col-lg-10 order-newItem-left">
+        <div class="row">
+            <div class="col-md-4 order-newItem-comp">
+                ►<!--<input type="text" [(ngModel)]="pubName" (keyup.enter)="addClicked()">-->
+            </div>
+            <div class="col-md-8 order-newItem-title">
+                ►<!--<input type="text" [value]="dishName" (input)="newItemChanged($event, 'dishName')">-->
+            </div>
+        </div>
+        <div class="order-newItem-person">
+            <div class="order-newItem-addSign">
+                +
+            </div>
+            <strong class="order-newItem-person-noChoosen">dodaj osobę</strong>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-3 col-lg-2 order-newItem-right">
+        <div class="order-newItem-opt" (click)="addClicked()">
+            +
+        </div>
+        <div class="clearBig"></div>
+        <div class="order-newItem-cost">
+            --.--
+            <tiny>zł</tiny>
+        </div>
+    </div>
+</div>

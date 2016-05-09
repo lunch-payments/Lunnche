@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var browser_1 = require('angular2/platform/browser');
 var core_1 = require('angular2/core');
 var order_list_component_1 = require('./orders/order-list.component');
+var order_newItem_component_1 = require('./orders/order-newItem.component');
 var OrdersMain = (function () {
     // orders: Order[];
     function OrdersMain() {
@@ -19,7 +20,7 @@ var OrdersMain = (function () {
     OrdersMain = __decorate([
         core_1.Component({
             selector: 'app',
-            directives: [order_list_component_1.OrderListComponent],
+            directives: [order_list_component_1.OrderListComponent, order_newItem_component_1.OrderNewItemComponent],
             templateUrl: 'app/orders/main.component.html'
         })
     ], OrdersMain);

@@ -2,10 +2,11 @@ import { bootstrap } from 'angular2/platform/browser';
 import { Component } from 'angular2/core';
 
 import { OrderListComponent } from './orders/order-list.component';
+import { OrderNewItemComponent } from './orders/order-newItem.component';
 
 @Component({
     selector: 'app',
-    directives: [OrderListComponent],
+    directives: [OrderListComponent, OrderNewItemComponent],
     templateUrl: 'app/orders/main.component.html'
 })
 
