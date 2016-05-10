@@ -1,0 +1,35 @@
+
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #cecece;
+}
+tiny {
+    font-size: 12px;
+}
+.clear {
+    clear: both;
+}
+.clearBig {
+    @media (min-width: 34em) {
+        clear: both;
+    }
+}
+.nomargin {
+    margin: 0 !important;
+}
+.nopadding {
+    padding: 0 !important;
+}
+.debt {
+    color: #df3939;
+}
+.profit {
+    color: rgb(42, 204, 2);
+}
+.content {
+    margin-top: 20px;
+    padding: 15px 10px;
+    background-color: #fff;
+}

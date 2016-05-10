@@ -32,24 +32,20 @@
 
     <!-- Add your site or application content here -->
     <script>
-      System.config({
-          packages: {
-              app: {
-                  defaultExtension: 'js'
-              }
-          }
-      });
-      System.import('app/app')
-          .then(null, console.error.bind(console));
+        System.config({
+            packages: {
+                app: {
+                    defaultExtension: 'js'
+                }
+            }
+        });
+        System.import('app/app')
+            .then(null, console.error.bind(console));
     </script>
 
     <div class="container content">
         <h1 style="margin-top: 0;">Zamówienie</h1>
         <app></app>
-    </div>
-
-    <div class="">
-
     </div>
 
     <!--
