@@ -1,6 +1,6 @@
-
 * {
     box-sizing: border-box;
+    font-family: "Comic Sans MS";
 }
 body {
     background-color: #cecece;
@@ -32,4 +32,8 @@ tiny {
     margin-top: 20px;
     padding: 15px 10px;
     background-color: #fff;
+}
+.modal-details {
+    position: relative;
+    padding: 15px;
 }
