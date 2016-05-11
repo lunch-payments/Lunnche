@@ -31,7 +31,7 @@
         <![endif]-->
 
     <!-- Add your site or application content here -->
-    <script>
+    <!--<script>
         System.config({
             packages: {
                 app: {
@@ -41,28 +41,36 @@
         });
         System.import('app/app')
             .then(null, console.error.bind(console));
-    </script>
+    </script>-->
 
-    <div class="container content">
-        <h1 style="margin-top: 0;">Zamówienie</h1>
-        <app></app>
-        <div class="order-summary">
-            <p>Łączny koszt zamówienia: <span class="h1">16.00</span><span class="tiny">zł</span></p> <button class="btn btn-primary">Zatwierdź zamówienie</button>
-        </div>
-    </div>
-
-    <!--
-        <div class="order-addItem active">
-            <div class="order-addItem-toggler"></div>
-            <div class="order-addItem-panel">
-                <div class="order-addItem-dropdown"></div>
+    <div class="topNav">
+        <div class="topNav-notifications-wrap">
+            <div class="topNav-notifications">
+                <img src="/assets/img/notifications-button.png" alt="" />
+            </div>
+            <!--
+            <div class="topNav-notifications-list">
+                <div class="topNav-notifications-list-title">
+                    Powiadomienia
+                </div>
                 <ul class="list-unstyled">
-                    <li class="order-item small-item">
-                        <div class="order-item-title">Kebson na cienkim z mieszanym</div>
+                    <li>
+                        dupa dupa
                     </li>
                 </ul>
             </div>
-        </div>-->
+        -->
+        </div>
+        <div class="topNav-profile">
+            <img src="http://placehold.it/250x250" alt="" />
+            <span>Lorem Ipsum</span>
+        </div>
+    </div>
+
+    <div class="container content">
+        <h1 style="margin-top: 0;">Strona główna</h1>
+
+    </div>
 
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script>
