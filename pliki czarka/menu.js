@@ -1,10 +1,5 @@
 var zmien = 0;
 
-function dis() {
-    $( "div.und" ).removeClass( "no" );
-    $('div.ma').addClass('no');
-}
-
 function setting() {
     $( "div.grey" ).removeClass( "no" );
     $( "div.setting" ).removeClass( "no" );

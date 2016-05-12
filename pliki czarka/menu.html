@@ -2,7 +2,6 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
@@ -12,24 +11,23 @@
 	
 	<body>
 
-	<h1>Twoje ostatnie zamówienia</h1>
+	<h1 class="h1menu">Twoje ostatnie zamówienia</h1>
 
 		<div class="name">
-			Witaj (Nick)<input  class="avatar off" type="file" name="pic" >
+			Witaj (Nick)<input  class="avatar off"  type="file" name="pic" title="Zmiana Avatara">
 			<img class="avatar on" src="avatar.png">
 		</div>
 
-		<div class="und no">
-			<input onclick='setting()' type="button" class="btn btn-primary fix" value="Zmień swoje dane"><br>
-			<input type="button" class="btn btn-primary fix" value="Zamówienia"></a><br>
-			<input type="button" class="btn btn-primary fix" value="Raporty"></a><br>
-		<a href="index.html"><input type="button" class="btn btn-danger" value="Wyloguj"></a>
-		</div>
 
-	<div class="ma und">
-
-		<img onclick='dis()' class="szczalka" src="szczałka.jpg">
-
+	<div class="dropdown und">
+		<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Ustawienia
+			<span class="caret"></span></button>
+		<ul class="dropdown-menu dropdown-menu-right">
+			<li><input onclick='setting()' type="button" class="btn btn-primary fix first" value="Zmień swoje dane"></li>
+			<li><input type="button" class="btn btn-primary fix" value="Zamówienia"></a></li>
+			<li><input type="button" class="btn btn-primary fix" value="Raporty"></a></li>
+			<li><a href="index.html"><input type="button" class="btn btn-danger fix last" value="Wyloguj"></a></li>
+		</ul>
 	</div>
 			<div class="setting no centered-element">
 				<div  class="avatarform no centered-element">
@@ -97,42 +95,42 @@
 			</div>
 			<div class="col-sm-5">
 
-				<h4>Kebs</h4><br>
-				Resteuracja: Afgan Kebab
+				<h4>Pizza</h4><br>
+				Resteuracja: Pizza hut
+				10.05.2016<br>
+				Zapłacił: Veak 12zł<br>
+
+			</div>
+			<div class="col-sm-5">
+
+				<h4>Soczek</h4><br>
+				Resteuracja: Top Market
+				10.05.2016<br>
+				Zapłacił: TY 12zł<br>
+
+			</div>
+			<div class="col-sm-5">
+
+				<h4>Ciastko</h4><br>
+				Resteuracja: Top Market
 				10.05.2016<br>
 				Zapłacił: Maciuś 12zł<br>
 
 			</div>
 			<div class="col-sm-5">
 
-				<h4>Kebs</h4><br>
-				Resteuracja: Afgan Kebab
+				<h4>Chińczyk</h4><br>
+				Resteuracja: Chińczyk
 				10.05.2016<br>
-				Zapłacił: Maciuś 12zł<br>
+				Zapłacił: Venhal 12zł<br>
 
 			</div>
 			<div class="col-sm-5">
 
-				<h4>Kebs</h4><br>
-				Resteuracja: Afgan Kebab
+				<h4>Krawetki</h4><br>
+				Resteuracja: Resteuracja
 				10.05.2016<br>
-				Zapłacił: Maciuś 12zł<br>
-
-			</div>
-			<div class="col-sm-5">
-
-				<h4>Kebs</h4><br>
-				Resteuracja: Afgan Kebab
-				10.05.2016<br>
-				Zapłacił: Maciuś 12zł<br>
-
-			</div>
-			<div class="col-sm-5">
-
-				<h4>Kebs</h4><br>
-				Resteuracja: Afgan Kebab
-				10.05.2016<br>
-				Zapłacił: Maciuś 12zł<br>
+				Zapłacił: Ty 12zł<br>
 
 			</div>
 
