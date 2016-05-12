@@ -53,6 +53,7 @@ tiny {
     position: fixed;
     top: 0;
     right: 5%;
+    @include user-select(none);
 }
 .topNav-notifications-wrap,
 .topNav-profile {
@@ -76,11 +77,23 @@ tiny {
 .topNav-notifications-list {
     position: absolute;
     top: 49px;
+    right: 0;
+    width: 275px;
+    font-size: 0.8rem;
     background-color: #fff;
-    width: 200px;
-    left: -70px;
+    border: 1px solid rgb(206, 206, 206);
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.25);
+    li {
+        padding: 5px 10px 0;
+        &:hover {
+            background-color: #fafafa;
+        }
+        hr {
+            margin: 5px 0 0;
+        }
+    }
 }
-.topNav-notifications-list-title {
+.topNav-notifications-list-header {
     color: rgb(153, 153, 153);
     font-size: 0.8rem;
     font-weight: bold;
@@ -96,5 +109,21 @@ tiny {
     img {
         height: 35px;
         border-radius: 100%;
+    }
+}
+.notification-name {
+    font-weight: bold;
+}
+.notification-buttons {
+    text-align: center;
+    a {
+        display: inline-block;
+        padding: 3px 5px;
+    }
+    .divider {
+        display: inline-block;
+        border-left: 1px solid #cecece;
+        width: 1px;
+        height: 10px;
     }
 }
